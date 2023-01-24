@@ -1,0 +1,11 @@
+print(10 + 5)
+print(10 - 5)
+print(10 * 5)
+print(10 / 5)
+print(10 % 5)
+print(10 ** 5)
+print(14 // 5) #rounds
+print(10 & 5)
+print(10 | 5)
+print(10 ^ 5)
+print(~ 5)
