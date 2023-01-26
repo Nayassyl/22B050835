@@ -1,8 +1,6 @@
-n = int(input())
-m = int(input())
-k = int(input())
+N = int(input())
+M = int(input())
+x = int(input())
+y = int(input())
 
-if( (((n * m) - k) % n == 0 or ((n * m) - k) % m == 0) and k <= (n * m)):
-    print("YES")
-else:
-    print("NO")
+print(min(x, y, min(N, M)-x, max(N, M)-y))
