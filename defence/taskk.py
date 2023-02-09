@@ -5,4 +5,4 @@ i = 1
 while i <=n :
     st += str(i)
     i += 1
-    print((n - i)  * pb + st)
+    print((n - i + 1)  * pb + st)
