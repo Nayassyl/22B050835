@@ -4,12 +4,12 @@ while True:
     x = input()
     if x == "HELP":
         break
-    answer = input()
     x = {i for i in x.split()}
-    if answer == "YES":
-        s &= x
-    elif answer == "NO":
+    if len(s & x) <= len(s)/2:
+        print("NO")
         s -= x
+    else:
+        print("YES")
+        s &= x
 for elem in s:
     print(elem)
-
