@@ -3,19 +3,20 @@ import json
 with open('C:\python2\week4\lab\json\data.json', 'r') as file:
     json_data = json.load(file)
 
-print("""Interface Status
-================================================================================
-DN                                              Description           MTU    Speed 
----------------------------------------------- --------------------  ------  ------""")
-
-for i in range(3):
+print('''=======================================================================================
+DN                                                 Description           Speed    MTU 
+-------------------------------------------------- --------------------  ------  ------''')
+dn, mtu, description, speed = "", "", "", ""
+for i in range(10):
     for key, value in json_data["imdata"][i]['l1PhysIf']["attributes"].items():
         if key == 'dn':
-            print(value, end = "                            ")
+            dn = value
         if key == 'speed':
-            print(value, end = "")
+            speed = value
         if key == 'mtu':
-            print(value, end = "   ")
-    print()
+            mtu = value
+        if key == 'descr':
+            description = value
+    print("{0:51} {1:20} {2:8} {3:6}".format(dn,description,speed,mtu))
 
     
