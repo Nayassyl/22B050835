@@ -46,7 +46,7 @@ class Person:
     print("Hello my name is " + self.name)
 
 p1 = Person("John", 36)
-p1.myfunc(
+p1.myfunc()
 
 
 class Person:
